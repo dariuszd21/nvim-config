@@ -66,5 +66,7 @@ return {
 
     -- Install golang specific config
     require('dap-go').setup()
+    -- Install python specific config
+    require('dap-python').setup()
   end,
 }
