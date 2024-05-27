@@ -161,6 +161,8 @@ return {
       require('lspconfig').zls.setup {}
       --[[ Configure LSP for C/C++ ]]
       require('lspconfig').clangd.setup {}
+      --[[ Configure LSP for YAML ]]
+      require('lspconfig').yamlls.setup{}
     end,
   },
 }
