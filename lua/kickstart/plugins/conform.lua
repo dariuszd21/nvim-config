@@ -28,10 +28,10 @@ return {
         lua = { 'stylua' },
         -- You can use a function here to determine the formatters dynamically
         python = function(bufnr)
-          if require('conform').get_formatter_info('ruff_format', bufnr).available then
-            return { 'ruff_format' }
+          if require('conform').get_formatter_info('black', bufnr).available then
+            return { 'black' }
           else
-            return { 'isort', 'black' }
+            return { 'ruff_format' }
           end
         end,
         -- Conform will run multiple formatters sequentially
