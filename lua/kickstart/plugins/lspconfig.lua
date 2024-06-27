@@ -134,7 +134,9 @@ return {
 
       --[[ Configure LSP for Python ]]
       require('lspconfig').pylsp.setup {}
-      require('lspconfig').ruff_lsp.setup {}
+      --[[ Use ruff embedded server introduced in ruff 0.4.5 ]]
+      require('lspconfig').ruff.setup {}
+      -- require('lspconfig').ruff_lsp.setup {}
       --[[ Configure LSP for Rust ]]
       require('lspconfig').rust_analyzer.setup {}
       --[[ Configure LSP for Golang ]]
