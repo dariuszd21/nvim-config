@@ -70,3 +70,8 @@ vim.opt.scrolloff = 10
 
 -- Enable 24-bit color support
 vim.opt.termguicolors = true
+
+-- Fold using treesitter
+vim.opt.foldmethod = 'expr'
+vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+vim.opt.foldlevelstart = 99
