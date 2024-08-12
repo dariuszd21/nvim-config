@@ -26,8 +26,9 @@ return {
         lualine_a = {
           'mode',
           function()
-            if vim.fn.reg_recording() ~= '' then
-              return 'Recording @' .. vim.fn.reg_recording()
+            local noice = require 'noice'
+            if noice.api.status.mode.has() then
+              return noice.api.status.mode.get()
             else
               return ''
             end
