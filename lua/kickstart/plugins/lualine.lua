@@ -23,7 +23,16 @@ return {
         },
       },
       sections = {
-        lualine_a = { 'mode' },
+        lualine_a = {
+          'mode',
+          function()
+            if vim.fn.reg_recording() ~= '' then
+              return 'Recording @' .. vim.fn.reg_recording()
+            else
+              return ''
+            end
+          end,
+        },
         lualine_b = { 'branch', 'diff', 'diagnostics' },
         lualine_c = { 'filename' },
         lualine_x = { 'filetype' },
