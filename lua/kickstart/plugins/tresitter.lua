@@ -1,6 +1,10 @@
 return {
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
+    dependencies = {
+      -- plugin that shows the context of the currently visible buffer contents.
+      'nvim-treesitter/nvim-treesitter-context',
+    },
     build = ':TSUpdate',
     opts = {
       ensure_installed = { 'bash', 'c', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc' },
