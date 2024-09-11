@@ -141,7 +141,7 @@ return {
       require('lspconfig').golangci_lint_ls.setup {}
       require('lspconfig').gopls.setup {}
       --[[ Configure LSP for TypeScript ]]
-      require('lspconfig').tsserver.setup {}
+      require('lspconfig').ts_ls.setup {}
       --[[ Configure LSP for Lua ]]
       require('lspconfig').lua_ls.setup {
         -- cmd = {...},
