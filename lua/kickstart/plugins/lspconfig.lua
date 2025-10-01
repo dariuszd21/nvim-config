@@ -131,19 +131,28 @@ return {
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 
       --[[ Configure LSP for Python ]]
-      require('lspconfig').pylsp.setup {}
+      vim.lsp.config('pylsp', {})
+      vim.lsp.enable 'pylsp'
       --[[ Use ruff embedded server introduced in ruff 0.4.5 ]]
-      require('lspconfig').ruff.setup {}
-      -- require('lspconfig').ruff_lsp.setup {}
+      vim.lsp.config('ruff', {})
+      vim.lsp.enable 'ruff'
       --[[ Configure LSP for Rust ]]
-      require('lspconfig').rust_analyzer.setup {}
+      vim.lsp.config('rust_analyzer', {})
+      vim.lsp.enable 'rust_analyzer'
       --[[ Configure LSP for Golang ]]
-      require('lspconfig').golangci_lint_ls.setup {}
-      require('lspconfig').gopls.setup {}
+      vim.lsp.config('golangci_lint_ls', {})
+      vim.lsp.enable 'golangci_lint_ls'
+      vim.lsp.config('gopls', {
+        settings = {
+          buildflags = { '-tags=integration,exclude_graphdriver_btrfs,containers_image_openpgp' },
+        },
+      })
+      vim.lsp.enable 'gopls'
       --[[ Configure LSP for TypeScript ]]
-      require('lspconfig').ts_ls.setup {}
+      vim.lsp.config('ts_ls', {})
+      vim.lsp.enable 'ts_ls'
       --[[ Configure LSP for Lua ]]
-      require('lspconfig').lua_ls.setup {
+      vim.lsp.config('lua_ls', {
         -- cmd = {...},
         -- filetypes = { ...},
         -- capabilities = {},
@@ -156,13 +165,17 @@ return {
             -- diagnostics = { disable = { 'missing-fields' } },
           },
         },
-      }
+      })
+      vim.lsp.enable 'lua_ls'
       --[[ Configure LSP for Zig ]]
-      require('lspconfig').zls.setup {}
+      vim.lsp.config('zls', {})
+      vim.lsp.enable 'zls'
       --[[ Configure LSP for C/C++ ]]
-      require('lspconfig').clangd.setup {}
+      vim.lsp.config('clangd', {})
+      vim.lsp.enable 'clangd'
       --[[ Configure LSP for YAML ]]
-      require('lspconfig').yamlls.setup {}
+      vim.lsp.config('yamlls', {})
+      vim.lsp.enable 'yamlls'
     end,
   },
 }
