@@ -11,21 +11,17 @@
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
-  -- Replaced wtih lua implementation the same as in here
-  -- https://github.com/nvim-lua/kickstart.nvim/pull/1512
-  { 'NMAC427/guess-indent.nvim', opts = {} }, -- Detect tabstop and shiftwidth automatically
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
   -- keys can be used to configure plugin behavior/loading/etc.
-  --
   -- Use `opts = {}` to force a plugin to be loaded.
-  --
   --  This is equivalent to:
-  --    require('Comment').setup({})
-
-  -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim', opts = {} },
+  --  require('guess-indent').setup({})
+  --
+  -- NOTE: Replaced wtih lua implementation the same as in here
+  -- https://github.com/nvim-lua/kickstart.nvim/pull/1512
+  { 'NMAC427/guess-indent.nvim', opts = {} }, -- Detect tabstop and shiftwidth automatically
 
   require 'kickstart.plugins.lualine',
 
