@@ -29,8 +29,11 @@ vim.opt.showmode = false
 --  See `:help 'clipboard'`
 vim.opt.clipboard = 'unnamedplus'
 
--- Enable break indent
-vim.opt.breakindent = true
+-- Remove autowrapping of lines
+vim.opt.formatoptions:remove 't'
+
+-- Enable smart indent
+vim.opt.smartindent = true
 
 -- Save undo history
 vim.opt.undofile = true
