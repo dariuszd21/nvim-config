@@ -33,9 +33,10 @@ require('lazy').setup({
 
   require 'kickstart.plugins.lspconfig',
 
-  require 'kickstart.plugins.conform',
+  require 'kickstart.plugins.lazydev',
+  require 'kickstart.plugins.blink-cmp',
 
-  require 'kickstart.plugins.nvim-cmp',
+  require 'kickstart.plugins.conform',
 
   require 'kickstart.plugins.theme',
 
