@@ -33,7 +33,6 @@ require('lazy').setup({
 
   require 'kickstart.plugins.lspconfig',
 
-  require 'kickstart.plugins.lazydev',
   require 'kickstart.plugins.blink-cmp',
 
   require 'kickstart.plugins.conform',

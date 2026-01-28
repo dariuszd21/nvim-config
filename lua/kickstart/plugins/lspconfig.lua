@@ -170,6 +170,10 @@ return {
       --[[ Configure LSP for YAML ]]
       vim.lsp.config('yamlls', {})
       vim.lsp.enable 'yamlls'
+
+      --[[ Configure LSP for copilot ]]
+      -- It's not enabled by default, only configured
+      vim.lsp.config('copilot', {})
     end,
   },
 }
