@@ -4,7 +4,6 @@ return {
     'nvim-lua/plenary.nvim',
     'nvim-treesitter/nvim-treesitter',
   },
-  version = '^18.0.0',
 
   opts = {},
   -- Only load when these commands are invoked
